@@ -14,6 +14,9 @@ It provides:
 Built for hackathons and MVP demos using **Flask + Google Gemini API** with a clean, modern UI.
 
 ---
+## 🎥  Preview :
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/e3721192-a4c4-4266-a526-3f34f8ce2417" />
+
 
 ## 🧠 How It Works
 
