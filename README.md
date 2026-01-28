@@ -47,4 +47,14 @@ Built for hackathons and MVP demos using **Flask + Google Gemini API** with a cl
 ---
 
 ## 📂 Project Structure
-
+Smart-Career-Guide/
+│
+├── app.py
+├── requirements.txt
+│
+├── templates/
+│ ├── index.html
+│ └── result.html
+│
+└── static/
+└── style.css
