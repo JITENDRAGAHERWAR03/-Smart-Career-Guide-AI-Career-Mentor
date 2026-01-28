@@ -47,25 +47,100 @@ Built for hackathons and MVP demos using **Flask + Google Gemini API** with a cl
 ---
 
 ## 📂 Project Structure
+
+```
 Smart-Career-Guide/
 │
 ├── app.py
 ├── requirements.txt
 │
 ├── templates/
-│ ├── index.html
-│ └── result.html
+│   ├── index.html
+│   └── result.html
 │
 └── static/
-└── style.css
+    └── style.css
+```
 
----
-
+ 
 ## ▶️ How to Run Locally
 
 1. Clone the repository:
 ```bash
 git clone https://github.com/your-username/smart-career-guide.git
 cd smart-career-guide
+```
+
 2.Install dependencies:
+```
 pip install -r requirements.txt
+```
+Run the app:
+```
+python app.py
+```
+
+Open in browser:
+```
+http://127.0.0.1:5000
+```
+---
+✨ Features
+
+AI-generated career guidance
+
+Clean modern UI
+
+Copy & Print career report
+
+Fast response using Gemini Flash model
+
+Hackathon-ready MVP
+
+Easy to extend:
+
+Resume checker
+
+Skill tracker
+
+Student dashboard
+
+Login system
+
+---
+🏆 Use Cases
+
+Hackathons
+
+College projects
+
+Career counseling tools
+
+EdTech MVP demos
+
+Portfolio project
+
+---
+💡 Future Improvements
+
+Resume upload & analysis
+
+User accounts & history
+
+Career dashboards
+
+Skill progress tracking
+
+Multi-language support
+
+Made with ❤️ using Flask + Google AI
+
+---
+## 👨‍💻 Author
+
+**Jitendra Gaherwar**  
+B.Tech (Information Technology)  
+Data & AI Developer  
+
+Focused on building practical, real-world AI tools for learning, productivity, and career growth.  
+Passionate about transforming ideas into usable products using Python, ML, and modern AI APIs.
