@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Career Plan • Smart Career Guide</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="bg"></div>
+
+  <main class="container">
+    <header class="header row">
+      <div>
+        <div class="badge">AI Generated Report</div>
+        <h1>Your Career Guidance</h1>
+        <p class="sub">Neeche AI ka personalized output hai. Isko copy karke save bhi kar sakta hai.</p>
+      </div>
+
+      <div class="right">
+        <a class="linkbtn" href="/">← New Analysis</a>
+      </div>
+    </header>
+
+    <section class="card">
+      <div class="toolbar">
+        <button class="ghost" id="copyBtn" type="button">Copy</button>
+        <button class="ghost" id="printBtn" type="button">Print</button>
+      </div>
+
+      <pre class="result">{{ result }}</pre>
+    </section>
+
+    <footer class="footer">
+      <span>Pro tip: Resume tips section ko implement karke “Resume Checker” feature next add kar sakta hai.</span>
+    </footer>
+  </main>
+
+  <script>
+    const copyBtn = document.getElementById("copyBtn");
+    const printBtn = document.getElementById("printBtn");
+
+    copyBtn?.addEventListener("click", async () => {
+      const text = document.querySelector(".result")?.innerText || "";
+      try {
+        await navigator.clipboard.writeText(text);
+        copyBtn.innerText = "Copied ✓";
+        setTimeout(() => (copyBtn.innerText = "Copy"), 1200);
+      } catch {
+        copyBtn.innerText = "Copy failed";
+        setTimeout(() => (copyBtn.innerText = "Copy"), 1200);
+      }
+    });
+
+    printBtn?.addEventListener("click", () => window.print());
+  </script>
+</body>
+</html>
+
+

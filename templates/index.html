@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Career Guide</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="bg"></div>
+
+  <main class="container">
+    <header class="header">
+      <div class="badge">Build With AI • Career Mentor</div>
+      <h1>Smart Career Guide</h1>
+      <p class="sub">
+        Apni skills aur interests daalo — AI tumhare liye personalized career path + 6 month roadmap bana dega.
+      </p>
+    </header>
+
+    <section class="card">
+      <form class="form" id="careerForm" action="/analyze" method="post">
+        <div class="grid">
+          <div class="field">
+            <label>Your Name</label>
+            <input type="text" name="name" placeholder="e.g., Jarvis" required>
+          </div>
+
+          <div class="field">
+            <label>Education</label>
+            <input type="text" name="education" placeholder="e.g., B.Tech IT (3rd Year)" required>
+          </div>
+
+          <div class="field">
+            <label>Current Skills</label>
+            <input type="text" name="skills" placeholder="e.g., Python, SQL, Power BI" required>
+          </div>
+
+          <div class="field">
+            <label>Interests</label>
+            <input type="text" name="interest" placeholder="e.g., Data Science, AI, Analytics" required>
+          </div>
+        </div>
+
+        <div class="actions">
+  <button class="btn" id="submitBtn" type="submit">
+  <span id="btnText">Generate Career Plan</span>
+  <span class="arrow" id="btnArrow">→</span>
+  <span class="spinner" id="spinner" aria-hidden="true"></span>
+</button>
+<p class="hint" id="hintText">Tip: Skills comma-separated likh (Python, SQL, ML)</p>
+
+        </div>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <span>Made with Flask + Google AI</span>
+      <span>•</span>
+      <span>Demo-ready Hackathon Project</span>
+    </footer>
+  </main>
+  <script>
+  const form = document.getElementById("careerForm");
+  const btn = document.getElementById("submitBtn");
+  const btnText = document.getElementById("btnText");
+  const btnArrow = document.getElementById("btnArrow");
+  const spinner = document.getElementById("spinner");
+  const hintText = document.getElementById("hintText");
+
+  form.addEventListener("submit", () => {
+    btn.disabled = true;
+    btn.classList.add("btn-disabled");
+    btnText.textContent = "Generating...";
+    btnArrow.style.display = "none";
+    spinner.style.display = "inline-block";
+    hintText.textContent = "Please wait — AI is creating your personalized plan.";
+  });
+</script>
+</body>
+</html>
