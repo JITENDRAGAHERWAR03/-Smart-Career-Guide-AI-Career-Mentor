@@ -1,3 +1,4 @@
+📌 CONTRIBUTING GUIDELINES
 --- 
 Smart Career Guide
 
